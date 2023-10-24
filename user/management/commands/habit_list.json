@@ -4,14 +4,14 @@
         "pk": 1,
         "fields": {
             "owner": 1,
-            "place_habit": "Место выполнения привычки 1",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 1",
+            "place_habit": "Утренняя зарядка в спортзале",
+            "time_habit": "06:00",
+            "get_habit": "Выполняем комплекс упражнений для здоровья",
             "nice_habit": true,
-            "associated_habit": "Приятная связанная привычка 1",
+            "associated_habit": "После привычки выпить стакан воды",
             "period_habit": "Каждый день",
-            "reward_habit": "Награда за выполнение привычки 1",
-            "time_limit": 60,
+            "reward_habit": "Чувство бодрости и энергии",
+            "time_limit": 30,
             "is_public": true
         }
     },
@@ -20,143 +20,63 @@
         "pk": 2,
         "fields": {
             "owner": 1,
-            "place_habit": "Место выполнения привычки 2",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 2",
-            "nice_habit": false,
+            "place_habit": "Домашний ритуал чаепития",
+            "time_habit": "17:00",
+            "get_habit": "Пара минут наслаждения чашкой чая",
+            "nice_habit": true,
             "associated_habit": "Приятная связанная привычка 2",
-            "period_habit": "Один раз в неделю",
-            "reward_habit": "Награда за выполнение привычки 2",
-            "time_limit": 45,
-            "is_public": false
-        }
-    },
-    {
-        "model": "main.habit",
-        "pk": 2,
-        "fields": {
-            "owner": 1,
-            "place_habit": "Место выполнения привычки 3",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 3",
-            "nice_habit": true,
-            "associated_habit": "Приятная связанная привычка 3",
-            "period_habit": "Два раза в неделю",
-            "reward_habit": "Награда за выполнение привычки 3",
-            "time_limit": 30,
-            "is_public": true
-        }
-    },
-    {
-        "model": "main.habit",
-        "pk": 2,
-        "fields": {
-            "owner": 1,
-            "place_habit": "Место выполнения привычки 4",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 4",
-            "nice_habit": false,
-            "associated_habit": "Приятная связанная привычка 4",
-            "period_habit": "Три раза в неделю",
-            "reward_habit": "Награда за выполнение привычки 4",
-            "time_limit": 90,
-            "is_public": true
-        }
-    },
-    {
-        "model": "main.habit",
-        "pk": 2,
-        "fields": {
-            "owner": 1,
-            "place_habit": "Место выполнения привычки 5",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 5",
-            "nice_habit": true,
-            "associated_habit": "Приятная связанная привычка 5",
-            "period_habit": "Четыре раза в неделю",
-            "reward_habit": "Награда за выполнение привычки 5",
-            "time_limit": 120,
-            "is_public": false
-        }
-    },
-    {
-        "model": "main.habit",
-        "pk": 1,
-        "fields": {
-            "owner": 1,
-            "place_habit": "Место выполнения привычки 6",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 6",
-            "nice_habit": false,
-            "associated_habit": "Приятная связанная привычка 6",
             "period_habit": "Пять раз в неделю",
-            "reward_habit": "Награда за выполнение привычки 6",
-            "time_limit": 15,
-            "is_public": true
-        }
-    },
-    {
-        "model": "main.habit",
-        "pk": 1,
-        "fields": {
-            "owner": 1,
-            "place_habit": "Место выполнения привычки 7",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 7",
-            "nice_habit": true,
-            "associated_habit": "Приятная связанная привычка 7",
-            "period_habit": "Шесть раз в неделю",
-            "reward_habit": "Награда за выполнение привычки 7",
-            "time_limit": 75,
+            "reward_habit": "Отдых и релаксация",
+            "time_limit": 10,
             "is_public": false
         }
     },
     {
         "model": "main.habit",
-        "pk": 1,
+        "pk": 3,
         "fields": {
             "owner": 1,
-            "place_habit": "Место выполнения привычки 8",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 8",
-            "nice_habit": false,
-            "associated_habit": "Приятная связанная привычка 8",
+            "place_habit": "Полезные книги перед сном",
+            "time_habit": "22:00",
+            "get_habit": "Чтение 20 минут перед сном",
+            "nice_habit": true,
+            "associated_habit": "Легкий массаж ног",
             "period_habit": "Каждый день",
-            "reward_habit": "Награда за выполнение привычки 8",
-            "time_limit": 105,
+            "reward_habit": "Лучший сон и здоровье",
+            "time_limit": 20,
             "is_public": true
         }
     },
     {
         "model": "main.habit",
-        "pk": 1,
+        "pk": 4,
         "fields": {
             "owner": 1,
-            "place_habit": "Место выполнения привычки 9",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 9",
+            "place_habit": "Походы в парк",
+            "time_habit": "15:00",
+            "get_habit": "Гуляем на свежем воздухе",
             "nice_habit": true,
-            "associated_habit": "Приятная связанная привычка 9",
-            "period_habit": "Один раз в неделю",
-            "reward_habit": "Награда за выполнение привычки 9",
-            "time_limit": 30,
-            "is_public": true
+            "associated_habit": "Подарок себе вкусный мороженое",
+            "period_habit": "Три раза в неделю",
+            "reward_habit": "Положительные эмоции и активный отдых",
+            "time_limit": 60,
+            "is_public": false
         }
     },
     {
         "model": "main.habit",
-        "pk": 1,
+        "pk": 5,
         "fields": {
             "owner": 1,
-            "place_habit": "Место выполнения привычки 10",
-            "time_habit": "12:30",
-            "get_habit": "Что делаем (например, приседаем) 10",
+            "place_habit": "Сбор продуктов",
+            "time_habit": "10:00",
+            "get_habit": "Планируем меню и готовим здоровую пищу",
             "nice_habit": false,
-            "associated_habit": "Приятная связанная привычка 10",
-            "period_habit": "Два раза в неделю",
-            "reward_habit": "Награда за выполнение привычки 10",
-            "time_limit": 90,
-            "is_public": false
+            "associated_habit": "Поддержка семьи и обмен рецептами",
+            "period_habit": "Каждый день",
+            "reward_habit": "Полезное питание и забота о близких",
+            "time_limit": 120,
+            "is_public": true
         }
     }
 ]
