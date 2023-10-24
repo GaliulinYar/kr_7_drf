@@ -8,5 +8,4 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         # показываем все поля Юзера
         model = User
-        fields = '__all__'
-
+        fields = ['email', 'first_name', 'id']
