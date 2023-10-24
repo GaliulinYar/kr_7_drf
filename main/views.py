@@ -3,7 +3,7 @@ from rest_framework import generics, permissions
 
 from main.models import Habit
 from main.pagination import HabitPaginator
-from main.serializers import HabitSerializer
+from main.serializers import HabitSerializer, HabitCreateSerializer
 
 
 # Create your views here.
@@ -29,4 +29,4 @@ class MyHabitListAPIView(generics.ListAPIView):
 
 class HabitCreateAPIView(generics.CreateAPIView):
     """generic для создания списка привычек пользователей"""
-    serializer_class = HabitSerializer  # определяем сериализатор
+    serializer_class = HabitCreateSerializer  # определяем сериализатор

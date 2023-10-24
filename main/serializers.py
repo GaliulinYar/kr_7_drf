@@ -9,3 +9,11 @@ class HabitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Habit
         fields = ['get_habit', 'owner', 'id']
+
+
+class HabitCreateSerializer(serializers.ModelSerializer):
+    """Сериализатор для создания привычек"""
+
+    class Meta:
+        model = Habit
+        fields = '__all__'
