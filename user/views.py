@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 
 from user.models import User
 from user.serializers import UserSerializer
@@ -11,8 +11,4 @@ class UserViewSet(viewsets.ModelViewSet):
 
     serializer_class = UserSerializer
     queryset = User.objects.all()
-
-    # def perform_create(self, serializer):
-    #     """ Позволяем создавать и редактировать только свой профиль """
-    #
-    #     serializer.save(owner=self.request.user)
+    permission_classes = [permissions.IsAuthenticated]
