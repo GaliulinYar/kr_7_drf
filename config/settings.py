@@ -150,9 +150,9 @@ SIMPLE_JWT = {
 
 # Безопасность
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8000",  # изменить на адрес фрота (домен)
+    "http://localhost:8000",  # изменить на адрес фронта (домен)
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",  # изменить на адрес фрота (домен)
+    "http://localhost:8000",  # изменить на адрес фронcelerта (домен)
 ]
