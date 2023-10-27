@@ -33,7 +33,7 @@ class Habit(models.Model):
     place_habit = models.CharField(max_length=80, verbose_name='Место выполнения привычки')  # место выполнения привычки
     time_habit = models.TimeField(verbose_name='Время привычки')  # Время привычки
     get_habit = models.CharField(max_length=200, verbose_name='Что делаем(например, приседаем)')  # указание привычки - действие
-    nice_habit = models.BooleanField(verbose_name='Приятная привычка', default=False) # Признак приятной привычки Тру или Фолс
+    nice_habit = models.BooleanField(verbose_name='Приятная привычка')  # Признак приятной привычки Тру или Фолс
     associated_habit = models.CharField(max_length=100, verbose_name='Приятная связанная привычка ')  # Связанная привычка
 
     period_habit = models.CharField(choices=PERIOD, verbose_name='Периодичность') # Периодичность привычки
@@ -43,7 +43,7 @@ class Habit(models.Model):
         validators=[MaxValueValidator(120)]
     )  # Время на выполнение привычки (в секундах) не более 120 сек
 
-    is_public = models.BooleanField(default=True, verbose_name='Публичность') # Признак публичности (True - видно, False - не видно)
+    is_public = models.BooleanField(verbose_name='Публичность') # Признак публичности (True - видно, False - не видно)
 
     def __str__(self):
         return f'Я буду {self.get_habit} в {self.time_habit} в {self.place_habit} и получу за это{self.reward_habit}'
