@@ -12,7 +12,8 @@ from main.models import Habit
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-    # Открываем файл JSON и загружаем его содержимое
+
+        # Открываем файл JSON и загружаем его содержимое
         with open('user/management/commands/habit_list.json', 'r') as json_file:
             habit_data = json.load(json_file)
 
