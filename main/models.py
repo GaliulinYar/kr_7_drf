@@ -11,21 +11,21 @@ NULLABLE = {
 class Habit(models.Model):
 
     EVERY_DAY = 'Каждый день'
-    ONCE_A_WEEK = 'Один раз в неделю'
-    TWO_TIMES_A_WEEK = 'Два раза в неделю'
-    THREE_TIMES_A_WEEK = 'Три раза в неделю'
-    FOUR_TIMES_A_WEEK = 'Четыре раза в неделю'
-    FIVE_TIMES_A_WEEK = 'Пять раз в неделю'
-    SIX_TIMES_A_WEEK = 'Шесть раз в неделю'
+    ONCE_A_WEEK = 'Раз в два дня'
+    TWO_TIMES_A_WEEK = 'Раз в три дня'
+    THREE_TIMES_A_WEEK = 'Раз в четыре дня'
+    FOUR_TIMES_A_WEEK = 'Раз в пять дня'
+    FIVE_TIMES_A_WEEK = 'Раз в шесть дня'
+    SIX_TIMES_A_WEEK = 'Раз в семь дня'
 
     PERIOD = (
         (EVERY_DAY, 'Каждый день'),
-        (ONCE_A_WEEK, 'Один раз в неделю'),
-        (TWO_TIMES_A_WEEK, 'Два раза в неделю'),
-        (THREE_TIMES_A_WEEK, 'Три раза в неделю'),
-        (FOUR_TIMES_A_WEEK, 'Четыре раза в неделю'),
-        (FIVE_TIMES_A_WEEK, 'Пять раз в неделю'),
-        (SIX_TIMES_A_WEEK, 'Шесть раз в неделю'),
+        (ONCE_A_WEEK, 'Раз в два дня'),
+        (TWO_TIMES_A_WEEK, 'Раз в три дня'),
+        (THREE_TIMES_A_WEEK, 'Раз в четыре дня'),
+        (FOUR_TIMES_A_WEEK, 'Раз в пять дня'),
+        (FIVE_TIMES_A_WEEK, 'Раз в шесть дня'),
+        (SIX_TIMES_A_WEEK, 'Раз в семь дня'),
     )
 
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name='Создатель привычки',
@@ -36,6 +36,7 @@ class Habit(models.Model):
     nice_habit = models.BooleanField(verbose_name='Приятная привычка')  # Признак приятной привычки Тру или Фолс
     associated_habit = models.CharField(max_length=100, verbose_name='Приятная связанная привычка ')  # Связанная привычка
 
+    create_time = models.DateTimeField(auto_now_add=True, verbose_name='дата и время создания привычки')
     period_habit = models.CharField(choices=PERIOD, verbose_name='Периодичность') # Периодичность привычки
     reward_habit = models.CharField(max_length=50, verbose_name='Награда за выполнение привычки')  # Награда за выполнение привычки
     time_limit = models.PositiveSmallIntegerField(
