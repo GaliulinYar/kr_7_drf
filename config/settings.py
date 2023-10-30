@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'django_celery_beat',
+    'drf_yasg',
 
     'user',
     'main',
@@ -155,7 +156,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",  # изменить на адрес фронcelerта (домен)
+    "http://localhost:8000",  # изменить на адрес фронта (домен)
 ]
 
 
