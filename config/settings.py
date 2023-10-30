@@ -156,7 +156,7 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",  # изменить на адрес фронcelerта (домен)
+    "http://localhost:8000",  # изменить на адрес фронта (домен)
 ]
 
 
