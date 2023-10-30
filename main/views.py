@@ -53,5 +53,3 @@ class HabitDestroyAPIView(generics.DestroyAPIView):
         if self.request.user.is_authenticated:  # проверка на аудентификацию пользователя
             return Habit.objects.filter(owner=self.request.user)  # фильтруем привычки пользователя
         return Habit.objects.none()
-
-
