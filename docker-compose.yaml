@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+
+  redis:
+    image: redis:latest
+    ports:
+      - '6380:6379'
+
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=qwerty
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - pg_data:/var/lib/postgresql/data/pgdata
+    ports:
+      - '5433:5432'
+
+  app:
+    build: .
+    tty: true
+    command: sh -c "python manage.py migrate && python manage.py fill && python manage.py runserver 0.0.0.0:8000"
+
+    ports:
+      - '8000:8000'
+    volumes:
+      - .:/code
+
+  celery:
+    build: .
+    tty: true
+    command: celery -A app worker --loglevel=info
+    depends_on:
+      - redis
+      - app
+
+  celery_beat:
+    build: .
+    tty: true
+    command: celery -A config beat --loglevel=info -S django
+    depends_on:
+      - redis
+      - app
+
+
+volumes:
+  pg_data:
