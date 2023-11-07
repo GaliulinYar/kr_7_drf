@@ -9,6 +9,8 @@ python = "^3.10"
 Django = "^4.2.6"
 djangorestframework = "^3.14.0"
 requests = "^2.31.0"
+rest_framework_simplejwt
+celery = "^5.2.1"
 
 [tool.poetry.dev-dependencies]
 
