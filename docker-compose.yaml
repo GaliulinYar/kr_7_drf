@@ -12,6 +12,10 @@ services:
     environment:
       - POSTGRES_PASSWORD=qwerty
       - PGDATA=/var/lib/postgresql/data/pgdata
+      - POSTGRES_DB=drf
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
+
     volumes:
       - pg_data:/var/lib/postgresql/data/pgdata
     ports:
@@ -20,7 +24,7 @@ services:
   app:
     build: .
     tty: true
-    command: sh -c "python manage.py migrate && python manage.py fill && python manage.py runserver 0.0.0.0:8000"
+    command: sh -c "sleep 5 && python manage.py migrate && python manage.py fill && python manage.py runserver 0.0.0.0:8000"
 
     ports:
       - '8000:8000'
@@ -30,7 +34,7 @@ services:
   celery:
     build: .
     tty: true
-    command: celery -A app worker --loglevel=info
+    command: sh -c "sleep 10 && celery -A app worker --loglevel=info"
     depends_on:
       - redis
       - app
@@ -38,10 +42,15 @@ services:
   celery_beat:
     build: .
     tty: true
-    command: celery -A config beat --loglevel=info -S django
+    command: sh -c "sleep 15 && celery -A config beat --loglevel=info -S django"
     depends_on:
       - redis
       - app
+    environment:
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=drf
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=db
 
 
 volumes:
