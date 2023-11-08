@@ -18,5 +18,6 @@ COPY poetry.lock .
 COPY pyproject.toml .
 
 RUN poetry install
+# RUN pip install redis
 
 COPY . .
